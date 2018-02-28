@@ -1,0 +1,29 @@
+{
+  "name": "@lumavate/request-signer",
+  "version": "0.0.1",
+  "description": "Allows signing Lumavate platform requests",
+  "main": "build/main.js",
+  "files": [
+    "build/"
+  ],
+  "scripts": {
+    "dev": "backpack dev",
+    "build": "backpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lumavate-Team/js-signer.git"
+  },
+  "author": "Lumavate Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lumavate-Team/js-signer/issues"
+  },
+  "homepage": "https://github.com/Lumavate-Team/js-signer#readme",
+  "devDependencies": {
+    "backpack-core": "^0.5.0"
+  },
+  "dependencies": {
+    "random-number-csprng": "^1.0.2"
+  }
+}
