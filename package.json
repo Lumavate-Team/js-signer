@@ -1,6 +1,6 @@
 {
   "name": "@lumavate/request-signer",
-  "version": "0.0.1",
+  "version": "0.1.7",
   "description": "Allows signing Lumavate platform requests",
   "main": "build/main.js",
   "files": [
