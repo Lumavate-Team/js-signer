@@ -1,3 +1,5 @@
+import crypto from 'crypto'
+import querystring from 'querystring'
 import randomNumber from 'random-number-csprng'
 import { URLSearchParams } from 'url'
 
@@ -46,7 +48,8 @@ export async function signUrl({ method, path, body='' }) {
   // for consistent generation
   searchParams.sort()
 
-  const key = `${method.toLowerCase()}\n${root}\n${searchParams.toString()}\n${nonce}`
+  const decodedParams = querystring.unescape(searchParams.toString())
+  const key = `${method.toLowerCase()}\n${root}\n${decodedParams}\n${nonce}`
   const signature = await _generateSignature(key)
 
   searchParams.append('s-signature', signature)
